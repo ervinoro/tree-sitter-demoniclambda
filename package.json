@@ -1,0 +1,25 @@
+{
+  "name": "tree-sitter-demoniclambda",
+  "version": "0.0.1",
+  "description": "DemonicLambda grammar for tree-sitter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ervinoro/tree-sitter-demoniclambda.git"
+  },
+  "author": "Ervin Oro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ervinoro/tree-sitter-demoniclambda/issues"
+  },
+  "homepage": "https://github.com/ervinoro/tree-sitter-demoniclambda#readme",
+  "dependencies": {
+    "nan": "^2.13.2"
+  },
+  "devDependencies": {
+    "tree-sitter-cli": "^0.15.1"
+  }
+}

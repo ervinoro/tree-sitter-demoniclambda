@@ -1,0 +1,91 @@
+[
+  {
+    "type": "abstraction",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "application",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "boolean",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "divide",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "minus",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "plus",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "program",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "times",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "variable",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "(",
+    "named": false
+  },
+  {
+    "type": ")",
+    "named": false
+  },
+  {
+    "type": "λ",
+    "named": false
+  },
+  {
+    "type": ".",
+    "named": false
+  },
+  {
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "·",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
+  },
+  {
+    "type": "number",
+    "named": true
+  },
+  {
+    "type": "⊤",
+    "named": false
+  },
+  {
+    "type": "⊥",
+    "named": false
+  }
+]
