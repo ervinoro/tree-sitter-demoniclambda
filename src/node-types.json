@@ -25,6 +25,11 @@
     "fields": {}
   },
   {
+    "type": "paren_term",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "plus",
     "named": true,
     "fields": {}

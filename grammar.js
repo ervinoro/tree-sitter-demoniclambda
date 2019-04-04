@@ -5,17 +5,19 @@ module.exports = grammar({
     program: $ => $._term,
 
     _term: $ => choice(
-      seq(
-        '(',
-        $._term,
-        ')'
-      ),
+      $.paren_term,
       $.abstraction,
       $.application,
       $._expression,
       $.variable,
       $.number,
       $.boolean
+    ),
+
+    paren_term : $ => seq(
+        '(',
+        $._term,
+        ')'
     ),
 
     abstraction : $ => seq(
