@@ -10,17 +10,12 @@
     "fields": {}
   },
   {
+    "type": "bin_op",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "boolean",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "divide",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "minus",
     "named": true,
     "fields": {}
   },
@@ -30,17 +25,7 @@
     "fields": {}
   },
   {
-    "type": "plus",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "program",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "times",
     "named": true,
     "fields": {}
   },
@@ -66,20 +51,12 @@
     "named": false
   },
   {
-    "type": "+",
-    "named": false
+    "type": "bin_op_1",
+    "named": true
   },
   {
-    "type": "·",
-    "named": false
-  },
-  {
-    "type": "-",
-    "named": false
-  },
-  {
-    "type": "/",
-    "named": false
+    "type": "bin_op_2",
+    "named": true
   },
   {
     "type": "number",

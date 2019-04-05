@@ -8,7 +8,7 @@ module.exports = grammar({
       $.paren_term,
       $.abstraction,
       $.application,
-      $._expression,
+      $.bin_op,
       $.variable,
       $.number,
       $.boolean
@@ -37,48 +37,28 @@ module.exports = grammar({
 
     variable: $ => $._identifier,
 
-    _expression: $ => choice(
-      $.plus,
-      $.times,
-      $.minus,
-      $.divide
+    bin_op: $ => choice(
+        prec.left(
+            3,
+            seq(
+                $._term,
+                $.bin_op_1,
+                $._term
+            )
+        ),
+        prec.left(
+            4,
+            seq(
+                $._term,
+                $.bin_op_2,
+                $._term
+            )
+        )
     ),
 
-    plus : $ => prec.left(
-      3,
-      seq(
-        $._term,
-        '+',
-        $._term
-      )
-    ),
+    bin_op_1: $ => /[+-]/,
 
-    times : $ => prec.left(
-      4,
-      seq(
-        $._term,
-        '·',
-        $._term
-      )
-    ),
-
-    minus : $ => prec.left(
-      3,
-      seq(
-        $._term,
-        '-',
-        $._term
-      )
-    ),
-
-    divide : $ => prec.left(
-      4,
-      seq(
-        $._term,
-        '/',
-        $._term
-      )
-    ),
+    bin_op_2: $ => /[·\/]/,
 
     number: $ => /\d+/,
 
