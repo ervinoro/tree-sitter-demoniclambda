@@ -64,7 +64,7 @@
         },
         {
           "type": "SYMBOL",
-          "name": "_identifier"
+          "name": "identifier"
         },
         {
           "type": "STRING",
@@ -95,7 +95,7 @@
     },
     "variable": {
       "type": "SYMBOL",
-      "name": "_identifier"
+      "name": "identifier"
     },
     "bin_op": {
       "type": "CHOICE",
@@ -169,7 +169,7 @@
         }
       ]
     },
-    "_identifier": {
+    "identifier": {
       "type": "PATTERN",
       "value": "[a-z]+"
     }

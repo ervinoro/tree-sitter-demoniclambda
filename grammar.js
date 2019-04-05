@@ -22,7 +22,7 @@ module.exports = grammar({
 
     abstraction : $ => seq(
       'λ',
-      $._identifier,
+      $.identifier,
       '.',
       $._term
     ),
@@ -35,7 +35,7 @@ module.exports = grammar({
       )
     ),
 
-    variable: $ => $._identifier,
+    variable: $ => $.identifier,
 
     bin_op: $ => choice(
         prec.left(
@@ -67,6 +67,6 @@ module.exports = grammar({
       '⊥'
     ),
 
-    _identifier: $ => /[a-z]+/,
+    identifier: $ => /[a-z]+/,
   }
 });
