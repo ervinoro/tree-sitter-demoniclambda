@@ -112,7 +112,7 @@
               },
               {
                 "type": "SYMBOL",
-                "name": "bin_op_1"
+                "name": "bin_op_0"
               },
               {
                 "type": "SYMBOL",
@@ -133,6 +133,27 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "bin_op_1"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "_term"
+              }
+            ]
+          }
+        },
+        {
+          "type": "PREC_LEFT",
+          "value": 5,
+          "content": {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "_term"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "bin_op_2"
               },
               {
@@ -143,6 +164,10 @@
           }
         }
       ]
+    },
+    "bin_op_0": {
+      "type": "PATTERN",
+      "value": "[∧∨]"
     },
     "bin_op_1": {
       "type": "PATTERN",

@@ -51,6 +51,10 @@
     "named": false
   },
   {
+    "type": "bin_op_0",
+    "named": true
+  },
+  {
     "type": "bin_op_1",
     "named": true
   },

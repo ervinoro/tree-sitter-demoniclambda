@@ -42,7 +42,7 @@ module.exports = grammar({
             3,
             seq(
                 $._term,
-                $.bin_op_1,
+                $.bin_op_0,
                 $._term
             )
         ),
@@ -50,11 +50,21 @@ module.exports = grammar({
             4,
             seq(
                 $._term,
+                $.bin_op_1,
+                $._term
+            )
+        ),
+        prec.left(
+            5,
+            seq(
+                $._term,
                 $.bin_op_2,
                 $._term
             )
         )
     ),
+
+    bin_op_0: $ => /[∧∨]/,
 
     bin_op_1: $ => /[+-]/,
 
