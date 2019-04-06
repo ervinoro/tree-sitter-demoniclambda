@@ -10,6 +10,11 @@
     "fields": {}
   },
   {
+    "type": "assignment",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "bin_op",
     "named": true,
     "fields": {}
@@ -33,6 +38,14 @@
     "type": "variable",
     "named": true,
     "fields": {}
+  },
+  {
+    "type": "≔",
+    "named": false
+  },
+  {
+    "type": "\n",
+    "named": false
   },
   {
     "type": "(",

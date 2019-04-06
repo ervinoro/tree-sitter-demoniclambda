@@ -2,8 +2,41 @@
   "name": "demoniclambda",
   "rules": {
     "program": {
-      "type": "SYMBOL",
-      "name": "_term"
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "REPEAT",
+          "content": {
+            "type": "SYMBOL",
+            "name": "assignment"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_term"
+        }
+      ]
+    },
+    "assignment": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "variable"
+        },
+        {
+          "type": "STRING",
+          "value": "≔"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "_term"
+        },
+        {
+          "type": "STRING",
+          "value": "\n"
+        }
+      ]
     },
     "_term": {
       "type": "CHOICE",

@@ -2,7 +2,17 @@ module.exports = grammar({
   name: 'demoniclambda',
 
   rules: {
-    program: $ => $._term,
+    program: $ => seq(
+        repeat($.assignment),
+        $._term
+    ),
+
+    assignment: $ => seq(
+        $.variable,
+        '≔',
+        $._term,
+        '\n'
+    ),
 
     _term: $ => choice(
       $.paren_term,
