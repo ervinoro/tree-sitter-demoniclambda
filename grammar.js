@@ -1,10 +1,19 @@
 module.exports = grammar({
   name: 'demoniclambda',
 
+  extras: $ => [
+    $._comment,
+    /[\s\uFEFF\u2060\u200B\u00A0]/
+  ],
+
   rules: {
     program: $ => seq(
         repeat($.assignment),
         $._term
+    ),
+
+    _comment: $ => token(
+      seq('―', /.*/)
     ),
 
     assignment: $ => seq(

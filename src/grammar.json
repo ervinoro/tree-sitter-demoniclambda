@@ -17,6 +17,22 @@
         }
       ]
     },
+    "_comment": {
+      "type": "TOKEN",
+      "content": {
+        "type": "SEQ",
+        "members": [
+          {
+            "type": "STRING",
+            "value": "―"
+          },
+          {
+            "type": "PATTERN",
+            "value": ".*"
+          }
+        ]
+      }
+    },
     "assignment": {
       "type": "SEQ",
       "members": [
@@ -234,8 +250,12 @@
   },
   "extras": [
     {
+      "type": "SYMBOL",
+      "name": "_comment"
+    },
+    {
       "type": "PATTERN",
-      "value": "\\s"
+      "value": "[\\s\\uFEFF\\u2060\\u200B\\u00A0]"
     }
   ],
   "conflicts": [],
