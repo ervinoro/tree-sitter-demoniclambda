@@ -1,3 +1,5 @@
+const rewritePattern = require('regexpu-core');
+
 module.exports = grammar({
   name: 'demoniclambda',
 
@@ -41,7 +43,7 @@ module.exports = grammar({
 
     abstraction : $ => seq(
       'λ',
-      $.identifier,
+      $.binding,
       '.',
       $._term
     ),
@@ -54,14 +56,16 @@ module.exports = grammar({
       )
     ),
 
-    variable: $ => $.identifier,
+    binding: $ => $._identifier,
+
+    variable: $ => $._identifier,
 
     bin_op: $ => choice(
         prec.left(
             3,
             seq(
                 $._term,
-                $.bin_op_0,
+                choice('∧', '∨'),
                 $._term
             )
         ),
@@ -69,7 +73,7 @@ module.exports = grammar({
             4,
             seq(
                 $._term,
-                $.bin_op_1,
+                choice('+', '-'),
                 $._term
             )
         ),
@@ -77,17 +81,11 @@ module.exports = grammar({
             5,
             seq(
                 $._term,
-                $.bin_op_2,
+                choice('·', '/'),
                 $._term
             )
         )
     ),
-
-    bin_op_0: $ => /[∧∨]/,
-
-    bin_op_1: $ => /[+-]/,
-
-    bin_op_2: $ => /[·\/]/,
 
     number: $ => /\d+/,
 
@@ -96,6 +94,9 @@ module.exports = grammar({
       '⊥'
     ),
 
-    identifier: $ => /[a-z]+/,
+    _identifier: $ => new RegExp(rewritePattern('[^\\P{L}λ]+', 'u', {
+      'unicodePropertyEscape': true,
+      'useUnicodeFlag': true
+    }), 'u'),
   }
 });

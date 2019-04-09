@@ -20,6 +20,11 @@
     "fields": {}
   },
   {
+    "type": "binding",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "boolean",
     "named": true,
     "fields": {}
@@ -64,16 +69,28 @@
     "named": false
   },
   {
-    "type": "bin_op_0",
-    "named": true
+    "type": "∧",
+    "named": false
   },
   {
-    "type": "bin_op_1",
-    "named": true
+    "type": "∨",
+    "named": false
   },
   {
-    "type": "bin_op_2",
-    "named": true
+    "type": "+",
+    "named": false
+  },
+  {
+    "type": "-",
+    "named": false
+  },
+  {
+    "type": "·",
+    "named": false
+  },
+  {
+    "type": "/",
+    "named": false
   },
   {
     "type": "number",
@@ -86,9 +103,5 @@
   {
     "type": "⊥",
     "named": false
-  },
-  {
-    "type": "identifier",
-    "named": true
   }
 ]
