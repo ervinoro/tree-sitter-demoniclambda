@@ -19,7 +19,7 @@ module.exports = grammar({
     ),
 
     assignment: $ => seq(
-        $.variable,
+        $.binding,
         '≔',
         $._term,
         '\n'

@@ -38,7 +38,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "variable"
+          "name": "binding"
         },
         {
           "type": "STRING",
